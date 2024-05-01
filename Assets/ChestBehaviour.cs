@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChestBehaviour : MonoBehaviour
 {
+    public Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,14 @@ public class ChestBehaviour : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            // Play Animation
+            animator.SetTrigger("Open");
+        }
     }
 }
