@@ -24,6 +24,7 @@ public class ChestBehaviour : MonoBehaviour
         {
             // Play Animation
             animator.SetTrigger("Open");
+
         }
     }
 }
